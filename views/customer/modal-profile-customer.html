@@ -1,0 +1,46 @@
+<div class="inmodal">
+    <div class="modal-header">
+        <h4 class="modal-title">Customer Profile</h4>
+        <span class="modal-btn modal-btnedit btn-float btn-xs" ng-click="cancel()" ui-sref="customer.edit" tooltip-placement="bottom" tooltip="Edit customer">
+            <i class="fa fa-edit"></i>
+        </span>
+        <span class="modal-btn modal-btnclose btn-float" ng-click="cancel()" tooltip-placement="bottom" tooltip="Close">
+            <i class="fa fa-times"></i>
+        </span>
+    </div>
+    <div class="modal-body">
+        <div class="profile-sidebar">
+            <div class="row">
+                <div class="text-center profile-usertitle col-md-4">
+                    <div class="m-b-sm">
+                        <img alt="image" class="img-circle" src="http://placehold.it/350?text=USER+PHOTO">
+                    </div>
+                    <h2 class="ng-binding">Example user</h2>
+                    <p class="font-bold">Administrator</p>
+                </div>
+                <div class="col-md-8 white-bg p-xs">
+                    <h4><strong>Monica Smith</strong></h4>
+                    <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
+                    <h5>
+                        About me
+                    </h5>
+
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+
+                    <ul class="list-inline m-n">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" ng-click="cancel()"><i class="fa fa-times"></i> Close</button>
+    </div>
+</div>

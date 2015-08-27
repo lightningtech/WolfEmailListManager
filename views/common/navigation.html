@@ -2,33 +2,30 @@
     <div class="sidebar-collapse">
         <ul side-navigation class="nav metismenu" id="side-menu">
             <li class="nav-header">
-
-                <div class="dropdown profile-element" dropdown>
-                    <a class="dropdown-toggle" dropdown-toggle href>
-                            <span class="clear">
-                                <span class="block m-t-xs">
-                                    <strong class="font-bold">{{main.userName}}</strong>
-                             </span>
-                                <span class="text-muted text-xs block">Example menu<b class="caret"></b></span>
-                            </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="">Logout</a></li>
-                    </ul>
+                <div class="logo-big">
+                    <img src="img/logo_big.png" alt="" class="img-responsive">
                 </div>
                 <div class="logo-element">
-                    IN+
+                    MLM
                 </div>
-
-            </li>
-
-            <li ui-sref-active="active">
-                <a ui-sref="index.main"><i class="fa fa-laptop"></i> <span class="nav-label">Main page</span> </a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="index.minor"><i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span></a>
+                <a ui-sref="index.main"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('profile')}">
+                <a ui-sref="profile.view_profile"><i class="fa fa-user"></i> <span class="nav-label">Profile</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" ng-class="{in: $state.includes('profile')}">
+                    <li ng-click="minimalizelink()" ui-sref-active="active"><a ui-sref="profile.view">View profile</a></li>
+                    <li ng-click="minimalizelink()" ui-sref-active="active"><a ui-sref="profile.edit">Account Setting</a></li>
+                    <li><a ui-sref="login">Log out</a></li>
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('clean')}">
+                <a ui-sref="clean.add"><i class="fa fa-envelope"></i> <span class="nav-label"> Extract and clean</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="listmanagement.list"><i class="fa fa-cogs"></i> <span class="nav-label">Lists management</span></a>
             </li>
         </ul>
-
     </div>
 </nav>

@@ -1,0 +1,261 @@
+/********************
+	TOP NAVIGATION
+*********************/
+.minimalize-styl-2,.minimalize-styl-2:hover,.minimalize-styl-2:focus
+	background lighten(navy, 12%)
+	color #fff
+.navy-bg
+	>.nav.navbar-right > li > a
+		color: #ffffff
+	.navbar-form-custom .form-control
+		border-top: 0px solid #ccc
+		border-left: 0px solid #ccc
+		border-right: 0px solid #ccc
+		background: rgba(255, 255, 255, 0.4)
+		border-bottom: 0px solid #ccc
+		border-radius: 25px
+		padding: 0 0 0 45px
+		display: inline-block
+		vertical-align: middle
+		height: 34px
+		margin 7px 0 0 0
+	::-webkit-input-placeholder
+		color #eee
+	.navbar-form-custom:before
+		content: "\f002"
+		position: absolute
+		font-family: 'FontAwesome'
+		font-style: normal
+		font-weight: normal
+		speak: none
+		display: block
+		height: 30px
+		width: 30px
+		text-align: center
+		line-height: 30px
+		top: 9px
+		right: 168px
+		color: #B7C1D3
+		background: #ffffff
+		border-radius: 50%
+.navbar-top-links .open>a, .navbar-top-links .open>a:focus, .navbar-top-links .open>a:hover
+	background darken(navy, 3%)
+.navbar-top-links .dropdown-menu li a 
+	color #666
+// dropdown-user
+.navbar
+	li.dropdown-user .dropdown-toggle 
+		padding: 14px 6px 12px 8px
+	li.dropdown-user .dropdown-toggle > .username 
+		display: inline-block
+		font-size: 13px
+	li.dropdown-user .dropdown-toggle > img 
+		float: left
+		margin-top: -5px
+		margin-right: 5px
+		height: 29px
+		display: inline-block
+	li.dropdown-user .dropdown-toggle > i 
+		display: inline-block
+		margin-top: 5px
+		margin: 0
+		font-size: 13px
+	li.dropdown-user .dropdown-menu 
+		width: 175px
+	li.dropdown-user .dropdown-menu > li > a 
+		font-size: 14px
+	li.dropdown-user .dropdown-menu > li > a i 
+		width: 15px
+		display: inline-block
+		margin-right: 9px
+	li.dropdown-user .dropdown-menu > li > a .badge 
+		margin-right: 10px
+/************** 
+	NAVIGATION
+***************/
+.navbar-default .nav-header
+	border-bottom solid 1px #eeeeee
+	box-shadow: inset 0px 0px 94px 2px rgba(168,168,168,0.1);
+.navbar-default .nav .open > a,.navbar-default .nav .open > a:hover,.navbar-default .nav .open > a:focus 
+	background: #fff
+body.mini-navbar .logo-big
+	display none
+.logo-big img
+	width 85%
+	margin 0 auto
+	display block
+/************** 
+	BODY STYLE
+***************/
+.module-icon
+	border-right solid 1px #eee
+	height 45px
+	i.fa
+		font-size 1.5em
+		margin-top 10px
+#page-wrapper
+	border-left solid 1px #ddd
+/* inbox panel */
+.ibox-title
+	background navy
+	h1,h2,h3,h4,h5,small,p,.ibox-tools a
+		color #fff
+/* form style*/	
+.table .form-inline .form-control
+	width 100%
+.form-group 
+	>label
+		font-size: 13px
+		color: #454545
+		font-weight: 600
+		margin-bottom: 0px
+		text-transform: uppercase
+		line-height: 30px
+		padding: 0px
+.form-title-section
+	position: relative
+	margin: 15px 0 30px 0
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 0
+		border-top: 3px double #E5E5E5
+		left: auto
+		top: 46%
+		right: 0
+	> h1,> h2,> h3,> h4,> h5,> h6
+		position: relative
+		display: inline-block
+		background-color: #FFF
+		padding-right: 15px
+		margin-bottom: 0
+		text-transform uppercase
+		> span
+			color navy
+			font-weight 400
+	>h3
+		font-size 1.4em
+.checkbox
+	-ms-transform: scale(1.3); /* IE 9 */
+	-webkit-transform: scale(1.3); /* Safari */
+	transform: scale(1.3);
+	input[type="checkbox"], input[type="radio"] 
+		cursor pointer
+.input-group-addon
+	>.checkbox
+		margin 2px 1px 0 8px	
+		label::after
+			top 2px !important
+			left -1px !important
+/* table style */
+.table-responsive .row,.table-responsive .row > div,.table-toolbar .row,.table-toolbar .row > div
+	padding 0
+	margin 0
+.table-toolbar
+	margin-bottom 10px
+/* Align table elements that containing text with button or fields*/
+.center-datatable tr 
+	td,th
+		vertical-align: middle !important
+		text-align center
+table 
+  .table-link 
+    font-weight: 600
+    color: inherit
+      &:hover 
+        color: inherit
+  .table-avatar 
+    width: 42px
+    img 
+      width: 38px
+      height: 38px
+      border-radius: 50%
+/************** 
+	CUSTOM
+***************/
+// fix responsive bug 
+.chosen-container,.chosen-container ul>li.search-field,.chosen-container ul>li.search-field input,
+.chosen-container,.chosen-container ul>li.search-field,.chosen-container ul>li.search-field input
+	width: 100% !important
+.chosen-container
+	width 100% !important
+.breadcrumb
+	background transparent
+	margin 10px 0
+.d-inline
+	display inline-block
+	vertical-align middle
+.profile-sidebar
+	.profile-usertitle
+		padding 15px 10px 5px 10px  
+		h2
+			color: #5a7391
+			font-weight: 600
+			margin-bottom: 7px
+		p.font-bold
+			text-transform: uppercase
+			color: #5b9bd1
+			font-size: 13px
+			font-weight: 800
+			margin-bottom: 7px
+		img
+			width 50%
+/****************
+	LOGIN PAGE
+*****************/
+.loginscreen 
+	.btn-signup
+		border: 1px solid #d4d4d4
+	.img-responsive
+		width 80%
+
+.btn-facebook 
+	background-color: #3b5998 !important
+	border-color: #2f477b !important
+	border-radius 0px
+
+.btn-facebook:hover 
+	background-color: #2f477b !important
+	border-color: #263963 !important
+
+.btn-twitter 
+	background-color: #00aced !important
+	border-color: #0098d1 !important
+	border-radius 0px
+
+.btn-twitter:hover 
+	background-color: #0098d1 !important
+	border-color: #0283b4 !important
+
+.btn-signup,.or
+	font-weight: 400
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: rgba(0, 0, 0, 0.8)
+.or
+	font-size 11px
+	text-align: center
+	margin: 20px 0
+	position: relative
+	&:after 
+		content: ''
+		position: absolute
+		width: 32%
+		height: 1px
+		background-color: rgba(0, 0, 0, 0.2)
+		top: 8px
+		right: 0
+	&:before
+		content: ''
+		position: absolute
+		width: 32%
+		height: 1px
+		background-color: rgba(0, 0, 0, 0.2)
+		top: 8px
+		left: 0
+@media (min-width: 768px) 
+	.table-chosen
+		overflow-x inherit
+.btn-sh-none
+	box-shadow none !important

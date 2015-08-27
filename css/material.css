@@ -1,0 +1,68 @@
+.ibox,.material-box{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px ;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.22);
+}
+.navbar-fixed-top
+{
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+.btn{
+  position:relative;
+  overflow:hidden;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index:0;
+}
+
+.btn:hover{
+    z-index:1000;
+  box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+  -moz-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+}
+
+.btn-float
+{
+  box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+  -moz-box-shadow:rgba(0, 0, 0, 0.3) 0 3px 6px 0;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  -webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+.animate {
+    -webkit-animation:ripple 0.65s linear;
+   -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}

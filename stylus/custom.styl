@@ -271,8 +271,18 @@ table
 		background-color: rgba(0, 0, 0, 0.2)
 		top: 8px
 		left: 0
+/********************
+	RESPONSIVE STYLE
+*********************/
+.btn-sh-none
+	box-shadow none !important
+.logo-movil
+	display none
 @media (min-width: 768px) 
 	.table-chosen
 		overflow-x inherit
-.btn-sh-none
-	box-shadow none !important
+@media (max-width: 768px) 	
+	.logo-movil
+		display block
+		img
+			height 60px

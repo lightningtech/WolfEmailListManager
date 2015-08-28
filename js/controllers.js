@@ -25,14 +25,29 @@ function CleanCtrl($scope,WizardHandler,FileUploader) {
     };
 };
 
-function listmanagementCtrl ($scope) {
-     $scope.options = [
-        { name: 'Select bulk action', value: 'listmanagement.list' }, 
-        { name: 'Merge', value: 'listmanagement.merge' }, 
-        { name: 'Keep', value: 'listmanagement.keep' }, 
-        { name: 'Remove', value: 'listmanagement.remove' }, 
+function listmanagementCtrl ($scope,$state) {
+    // select bulk
+    $scope.optionsbulk = [
+        { label: 'Select bulk action', value: 'listmanagement.list' }, 
+        { label: 'Merge', value: 'listmanagement.merge' }, 
+        { label: 'Keep', value: 'listmanagement.keep' }, 
+        { label: 'Remove', value: 'listmanagement.remove' }, 
     ];
-    $scope.form = {type : $scope.options[0].value};
+    $scope.selectbulk = {url : $scope.optionsbulk[0].value};
+    $scope.locationChangebulk = function(){
+         $state.go($scope.selectbulk.url);
+    }
+    // select individual
+    $scope.optionsindividual = [
+        { label: 'Select bulk action', value: 'listmanagement.list' }, 
+        { label: 'Separate list', value: 'listmanagement.separate' }, 
+        { label: 'Make sample', value: 'listmanagement.makesample' }, 
+        { label: 'Split list', value: 'listmanagement.split' }, 
+    ];
+    $scope.selectindividual = {url : $scope.optionsindividual[0].value};
+    $scope.locationChangeindividual = function(){
+         $state.go($scope.selectindividual.url);
+    }
 }
 
 

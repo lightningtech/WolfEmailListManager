@@ -7,7 +7,8 @@
         'ui.router',                    // Routing
         'oc.lazyLoad',                  // ocLazyLoad
         'ui.bootstrap',                 // Ui Bootstrap
-        'mgo-angular-wizard'			// Wizard
+        'mgo-angular-wizard',			// Wizard
+        'angularFileUpload'				// upload mutlti file
     ])
 })();
 

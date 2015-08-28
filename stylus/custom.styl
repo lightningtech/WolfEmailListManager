@@ -100,7 +100,9 @@ body.mini-navbar .logo-big
 	background navy
 	h1,h2,h3,h4,h5,small,p,.ibox-tools a
 		color #fff
-/* form style*/	
+/************** 
+	FORM STYLE
+***************/
 .table .form-inline .form-control
 	width 100%
 .form-group 
@@ -156,7 +158,39 @@ input[type="checkbox"], input[type="radio"]
 	> .checkbox label::after
 		left: -1px
 		top: 2px
-/* table style */
+// upload input file style
+.btn-success-file
+	visibility: hidden
+	width: 0
+	position: relative
+	color: #fff
+.btn-success-file::before 
+	content: 'UPLOAD FILE'
+	display: inline-block
+	background: #1abc9c
+	border-radius: 0px
+	padding: 5px 8px
+	outline: none
+	white-space: nowrap
+	-webkit-user-select: none
+	cursor: pointer
+	color: #fff
+	font-size: 10pt
+	visibility: visible
+	position: absolute
+	margin: 0 auto
+.btn-success-file:hover::before 
+	background-color: darken(green, 3%)
+	border-color: darken(green, 3%)
+	color: #FFFFFF
+.btn-success-file:active::before 
+	background-color: darken(green, 3%)
+	border-color: darken(green, 3%)
+	color: #FFFFFF
+
+/************** 
+	TABLA STYLE
+***************/
 .table-responsive .row,.table-responsive .row > div,.table-toolbar .row,.table-toolbar .row > div
 	padding 0
 	margin 0
@@ -182,6 +216,13 @@ table
 /************** 
 	CUSTOM
 ***************/
+// fileupload style
+.my-drop-zone 
+	border: dotted 3px lightgray; 
+	padding: 50px
+.another-file-over-class 
+	border: dotted 3px green;
+// multi select
 .ms-container
 	width 100% !important
 	min-width 250px

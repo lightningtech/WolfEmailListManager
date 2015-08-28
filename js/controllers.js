@@ -15,32 +15,14 @@ function MainCtrl() {
 };
 
 /**
-* AddCustomerCtrl
+* CleanCtrl
 */
-function CleanCtrl($scope,WizardHandler) {
-    // Wizard 
-    $scope.user = {
-        firstName:  '',
-        phone:      '',
-        company:    '',
-        email:      '',
-        address:    ''
+function CleanCtrl($scope,WizardHandler,FileUploader) {
+    $scope.fileprocess = false
+    var uploader = $scope.uploader = new FileUploader();
+    uploader.onAfterAddingAll = function(addedFileItems) {
+        $scope.fileprocess = true
     };
-    // validation
-    $scope.addcustomer_submit = function() {
-        if ($scope.signup_form.$valid) {
-        } else {
-            $scope.signup_form.submitted = true;
-        }
-    }
-    $scope.ValidateAddCustomer1 = function() {
-        if(($scope.user.firstName) && ($scope.user.phone) && ($scope.user.company) && ($scope.user.email) && ($scope.user.address)){
-            WizardHandler.wizard().next();
-            $(".steps-indicator li.current,.steps-indicator li.editing").removeClass("error");
-        } else {
-            $(".steps-indicator li.current,.steps-indicator li.editing").addClass("error");
-        }
-    }
 };
 
 function listmanagementCtrl ($scope) {
@@ -85,6 +67,9 @@ function ionSlider() {
    
 }
 
+function addcleanCtrl ($scope,FileUploader) {
+    $scope.uploader = new FileUploader();
+}
 
 angular
     .module('inspinia')

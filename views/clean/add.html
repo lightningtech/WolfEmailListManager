@@ -20,7 +20,7 @@
       </div>
       <div class="ibox-content">
         <div class="row">
-          <form role="form" name="signup_form" novalidate ng-controller="CleanCtrl">
+          <form role="form" name="" action="" ng-controller="CleanCtrl">
             <section class="col-lg-12 cont-wizard">
                 <wizard on-finish="finishedWizard()" edit-mode=""> 
                     <wz-step title="UPLOAD FILE" iconname="upload">
@@ -31,21 +31,12 @@
                           <div class="col-md-12 col-lg-12">
                               <div class="form-group">
                                   <label>upload</label> 
-                                  <input type="text" placeholder="example" class="form-control" name="">
+                                  <input type="text" placeholder="example" class="form-control" name="" tabindex="1">
                               </div>
                           </div>
                       </div>
                       <div class="form-title-section">
                         <h3>RECENT <span>FILES</span></h3>
-                      </div>
-                      <div class="table-toolbar">
-                          <div class="row">
-                              <div class="col-md-6">
-                                  <div class="btn-group">
-                                      <a ui-sref="customer.add" class="btn btn-success btn-cons btn-xs"><i class="fa fa-plus"></i> ADD</a>
-                                  </div>
-                              </div>
-                          </div>
                       </div>
                       <div class="table-responsive">
                           <table datatable="" class="table table-striped table-bordered table-hover dataTables-example center-datatable">
@@ -80,12 +71,13 @@
                               </tbody>
                           </table>
                       </div>
+                      <div class="hr-line-dashed"></div>
                       <div class="form-group row-flex">
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-primary btn-block" type="submit" tabindex="">SAVE</button>
+                            <button class="btn btn-primary btn-block" type="submit" tabindex="2">SAVE</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" wz-next tabindex="">Next <i class="fa fa-chevron-right"></i></button>
+                            <button class="btn btn-white btn-block" type="submit" wz-next tabindex="3">Next <i class="fa fa-chevron-right"></i></button>
                           </div>
                       </div>
                     </wz-step>
@@ -98,8 +90,8 @@
                               <div class="form-group">
                                   <label>Sort by username</label> 
                                   <div class="switch">
-                                      <div class="onoffswitch">
-                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="sortusername">
+                                      <div class="onoffswitch" tabindex="4">
+                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="sortusername" name="">
                                           <label class="onoffswitch-label" for="sortusername">
                                               <span class="onoffswitch-inner"></span>
                                               <span class="onoffswitch-switch"></span>
@@ -112,8 +104,8 @@
                               <div class="form-group">
                                   <label>Sort by domain</label> 
                                   <div class="switch">
-                                      <div class="onoffswitch">
-                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="sortdomain">
+                                      <div class="onoffswitch" tabindex="5">
+                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="sortdomain" name="">
                                           <label class="onoffswitch-label" for="sortdomain">
                                               <span class="onoffswitch-inner"></span>
                                               <span class="onoffswitch-switch"></span>
@@ -131,8 +123,8 @@
                               <div class="form-group">
                                   <label>No duplicate domains</label> 
                                   <div class="switch">
-                                      <div class="onoffswitch">
-                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="filterdomains">
+                                      <div class="onoffswitch" tabindex="6">
+                                          <input type="checkbox" checked class="onoffswitch-checkbox" id="filterdomains" name="">
                                           <label class="onoffswitch-label" for="filterdomains">
                                               <span class="onoffswitch-inner"></span>
                                               <span class="onoffswitch-switch"></span>
@@ -147,11 +139,11 @@
                                   <div class="input-group m-b">
                                     <span class="input-group-addon p-none"> 
                                       <div class="checkbox checkbox-circle checkbox-primary m-none">
-                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" tabindex="7">
                                           <label></label>
                                       </div>
                                     </span> 
-                                    <input type="number" min="0" value="0" class="form-control" disabled>
+                                    <input type="number" min="0" value="0" class="form-control" name="" tabindex="8">
                                   </div>
                               </div>
                           </div>
@@ -160,7 +152,7 @@
                           <div class="col-md-12">
                               <div class="form-group">
                                   <label>Reject any addresses from these domains (i.e. @yahoo.com)</label> 
-                                  <select multiple chosen class="chosen-select form-control" tabindex="">
+                                  <select multiple chosen class="chosen-select form-control" name="" tabindex="9">
                                     <option value="">@media.com</option>
                                     <option selected value="">@wtf.com</option>
                                     <option value="">@aol.com</option>
@@ -172,15 +164,16 @@
                               </div>
                           </div>
                       </div>
+                      <div class="hr-line-dashed"></div>
                       <div class="form-group row-flex m-t">
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-primary btn-block" type="submit" tabindex="">SAVE</button>
+                            <button class="btn btn-primary btn-block" type="submit" tabindex="10">SAVE</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" wz-previous tabindex=""><i class="fa fa-chevron-left"></i> Previous</button>
+                            <button class="btn btn-white btn-block" type="submit" wz-previous tabindex="11"><i class="fa fa-chevron-left"></i> Previous</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" wz-next tabindex="">Next <i class="fa fa-chevron-right"></i></button>
+                            <button class="btn btn-white btn-block" type="submit" wz-next tabindex="12">Next <i class="fa fa-chevron-right"></i></button>
                           </div>
                       </div>
 
@@ -190,16 +183,17 @@
                           <div class="col-md-12 col-lg-12">
                               <div class="form-group">
                                   <label>Name of the output list</label> 
-                                  <input type="text" placeholder="Enter name" class="form-control" name="">
+                                  <input type="text" placeholder="Enter name" class="form-control" name="" tabindex="13">
                               </div>
                           </div>
                       </div>
+                      <div class="hr-line-dashed"></div>
                       <div class="form-group row-flex m-t">
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-primary btn-block" type="submit" tabindex="">SAVE</button>
+                            <button class="btn btn-primary btn-block" type="submit" tabindex="14">SAVE</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" wz-previous tabindex=""><i class="fa fa-chevron-left"></i> Previous</button>
+                            <button class="btn btn-white btn-block" type="submit" wz-previous tabindex="15"><i class="fa fa-chevron-left"></i> Previous</button>
                           </div>
                       </div>
                     </wz-step>

@@ -75,7 +75,7 @@
 ***************/
 .navbar-default .nav-header
 	border-bottom solid 1px #eeeeee
-	box-shadow: inset 0px 0px 94px 2px rgba(168,168,168,0.1);
+	box-shadow: inset 0px 0px 94px 2px rgba(168,168,168,0.1)
 .navbar-default .nav .open > a,.navbar-default .nav .open > a:hover,.navbar-default .nav .open > a:focus 
 	background: #fff
 body.mini-navbar .logo-big
@@ -136,18 +136,26 @@ body.mini-navbar .logo-big
 			font-weight 400
 	>h3
 		font-size 1.4em
-.checkbox
-	-ms-transform: scale(1.3); /* IE 9 */
-	-webkit-transform: scale(1.3); /* Safari */
-	transform: scale(1.3);
+input[type="checkbox"], input[type="radio"] 
+	cursor pointer
+// plugin checkbox and radio
+.table .checkbox
 	input[type="checkbox"], input[type="radio"] 
-		cursor pointer
+		top 3px
+		right 1px
+		width 15px
+		height 15px
 .input-group-addon
-	>.checkbox
-		margin 2px 1px 0 8px	
-		label::after
-			top 2px !important
-			left -1px !important
+	> .checkbox,
+	> .radio
+		margin 2px 1px 0 8px
+		input[type="checkbox"]
+			right: 9px
+			top: 2px
+			width: 14px
+	> .checkbox label::after
+		left: -1px
+		top: 2px
 /* table style */
 .table-responsive .row,.table-responsive .row > div,.table-toolbar .row,.table-toolbar .row > div
 	padding 0
@@ -160,24 +168,33 @@ body.mini-navbar .logo-big
 		vertical-align: middle !important
 		text-align center
 table 
-  .table-link 
-    font-weight: 600
-    color: inherit
-      &:hover 
-        color: inherit
-  .table-avatar 
-    width: 42px
-    img 
-      width: 38px
-      height: 38px
-      border-radius: 50%
+	.table-link 
+		font-weight: 600
+		color: inherit
+		&:hover 
+			color: inherit
+	.table-avatar 
+		width: 42px
+		img 
+			width: 38px
+			height: 38px
+			border-radius: 50%
 /************** 
 	CUSTOM
 ***************/
+.ms-container
+	width 100% !important
+	min-width 250px
+	.custom-header
+		font-size: 13px
+		color: #000
+		font-weight: 600
+		margin-bottom: 0px
+		text-transform: uppercase
+		line-height: 30px
+		background #f2f2f2
+		padding 3px 10px
 // fix responsive bug 
-.chosen-container,.chosen-container ul>li.search-field,.chosen-container ul>li.search-field input,
-.chosen-container,.chosen-container ul>li.search-field,.chosen-container ul>li.search-field input
-	width: 100% !important
 .chosen-container
 	width 100% !important
 .breadcrumb

@@ -140,6 +140,109 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
                 }
             }
         })
+        .state('listmanagement.merge', {
+            url: "/merge.html",
+            templateUrl: "views/listmanagement/merge.html",
+            data: { pageTitle: 'Merge list Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('listmanagement.remove', {
+            url: "/remove.html",
+            templateUrl: "views/listmanagement/remove.html",
+            data: { pageTitle: 'Remove list Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('listmanagement.keep', {
+            url: "/keep.html",
+            templateUrl: "views/listmanagement/keep.html",
+            data: { pageTitle: 'Keep list Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('listmanagement.makesample', {
+            url: "/makesample.html",
+            templateUrl: "views/listmanagement/makesample.html",
+            data: { pageTitle: 'Make sample list Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        },
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        },
+                        {
+                            files: ['css/plugins/ionRangeSlider/ion.rangeSlider.css','css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css','js/plugins/ionRangeSlider/ion.rangeSlider.min.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('listmanagement.separate', {
+            url: "/separate.html",
+            templateUrl: "views/listmanagement/separate.html",
+            data: { pageTitle: 'Separate List Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            insertBefore: '#loadBefore',
+                            name: 'localytics.directives',
+                            files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
+                        },
+                        {
+                            files: ['css/plugins/multiselect/multi-select.css','js/plugins/multiselect/jquery.multi-select.js','js/plugins/multiselect/jquery.quicksearch.js']
+                        }
+                    ]);
+                }
+            }
+        })
+        .state('listmanagement.split', {
+            url: "/split.html",
+            templateUrl: "views/listmanagement/split.html",
+            data: { pageTitle: 'Split list Management' },
+            resolve: {
+                loadPlugin: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        {
+                            files: ['css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css']
+                        }
+                    ]);
+                }
+            }
+        })
         /*
             TEMPLATE SETTINGS 
             NOTE: JUST FOR DEMO

@@ -15,8 +15,8 @@
             <li ng-class="{active: $state.includes('profile')}">
                 <a ui-sref="profile.view_profile"><i class="fa fa-user"></i> <span class="nav-label">Profile</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level" ng-class="{in: $state.includes('profile')}">
-                    <li ng-click="minimalizelink()" ui-sref-active="active"><a ui-sref="profile.view">View profile</a></li>
-                    <li ng-click="minimalizelink()" ui-sref-active="active"><a ui-sref="profile.edit">Account Setting</a></li>
+                    <li ui-sref-active="active"><a ui-sref="profile.view">View profile</a></li>
+                    <li ui-sref-active="active"><a ui-sref="profile.edit">Account Setting</a></li>
                     <li><a ui-sref="login">Log out</a></li>
                 </ul>
             </li>
@@ -25,6 +25,17 @@
             </li>
             <li ui-sref-active="active">
                 <a ui-sref="listmanagement.list"><i class="fa fa-cogs"></i> <span class="nav-label">Lists management</span></a>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-cogs"></i><span class="nav-label">Action view<span class="fa arrow"></span></span></a>
+                <ul class="nav nav-second-level" ng-class="{in: $state.includes('listmanagement')}">
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.merge">Merge</a></li>
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.keep">Keep</a></li>
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.remove">Remove</a></li>
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.separate">Separate</a></li>
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.makesample">Make sample</a></li>
+                    <li ui-sref-active="active"><a ui-sref="listmanagement.split">Split list</a></li>
+                </ul>
             </li>
         </ul>
     </div>

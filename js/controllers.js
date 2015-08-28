@@ -43,8 +43,52 @@ function CleanCtrl($scope,WizardHandler) {
     }
 };
 
+function listmanagementCtrl ($scope) {
+     $scope.options = [
+        { name: 'Select bulk action', value: 'listmanagement.list' }, 
+        { name: 'Merge', value: 'listmanagement.merge' }, 
+        { name: 'Keep', value: 'listmanagement.keep' }, 
+        { name: 'Remove', value: 'listmanagement.remove' }, 
+    ];
+    $scope.form = {type : $scope.options[0].value};
+}
+
+
+function ionSlider() {
+    this.ionSliderOptions1 = {
+        min: 0,
+        max: 5000,
+        type: 'single',
+        prefix: "Amount: ",
+        maxPostfix: "+",
+        prettify: false,
+        hasGrid: true
+    };
+    this.ionSliderOptions2 = {
+        min: 0,
+        max: 5000,
+        type: 'single',
+        prefix: "Star: ",
+        maxPostfix: "+",
+        prettify: false,
+        hasGrid: true
+    };
+    this.ionSliderOptions3 = {
+        min: 0,
+        max: 5000,
+        type: 'single',
+        prefix: "Random amount: ",
+        maxPostfix: "+",
+        prettify: false,
+        hasGrid: true
+    };
+   
+}
+
 
 angular
     .module('inspinia')
     .controller('MainCtrl', MainCtrl)
-    .controller('CleanCtrl',CleanCtrl);
+    .controller('CleanCtrl',CleanCtrl)
+    .controller('ionSlider',ionSlider)
+    .controller('listmanagementCtrl',listmanagementCtrl);

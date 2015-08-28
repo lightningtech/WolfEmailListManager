@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="listmanagementCtrl">
     <div class="ibox float-e-margins">
       <div class="ibox-title">
           <h5><i class="fa fa-cogs"></i> LIST MANAGEMENT</h5>
@@ -26,20 +26,15 @@
                       <i class="fa fa-files-o"></i> BULK ACTIONS
                   </tab-heading>
                   <div class="panel-body">
-                    <form role="form">
+                    <form role="form"  name="" action="">
                       <div class="table-toolbar">
                           <div class="row">
                               <div class="form-inline">
                                 <div class="form-group">
-                                  <select name="" id="" class="form-control">
-                                    <option selected value="">Select bulk action</option>
-                                    <option value="">Merge</option>
-                                    <option value="">Keep</option>
-                                    <option value="">Remove</option>
-                                  </select>
+                                  <select class="form-control" ng-model='form.type' required ng-options='option.value as option.name for option in options' name="" tabindex="1"></select>
                                 </div>
                                 <div class="form-group">
-                                  <button class="btn btn-primary" type="submit">Apply</button>
+                                  <a class="btn btn-primary" type="submit" tabindex="2">Apply</a>
                                 </div>
                               </div>
                           </div>
@@ -59,12 +54,12 @@
                                   <tr>
                                       <td>
                                         <div class="checkbox checkbox-primary m-none">
-                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" name="">
                                           <label></label>
                                         </div>
                                       </td>
                                       <td class="table-link ">
-                                        <a tooltip-placement="bottom" tooltip="See details" ng-click="" >master_list1</a>
+                                        <a title="See details" ng-click="" >master_list1</a>
                                       </td>
                                       <td>
                                         100 KB
@@ -88,12 +83,12 @@
                                   <tr>
                                       <td>
                                         <div class="checkbox checkbox-primary m-none">
-                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" name="">
                                           <label></label>
                                         </div>
                                       </td>
                                       <td class="table-link ">
-                                        <a tooltip-placement="bottom" tooltip="See details" ng-click="" >master_list2</a>
+                                        <a title="See details" ng-click="" >master_list2</a>
                                       </td>
                                       <td>
                                         100 KB
@@ -117,12 +112,12 @@
                                   <tr>
                                       <td>
                                         <div class="checkbox checkbox-primary m-none">
-                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One">
+                                          <input type="checkbox" id="singleCheckbox1" value="option1" aria-label="Single checkbox One" name="">
                                           <label></label>
                                         </div>
                                       </td>
                                       <td class="table-link ">
-                                        <a tooltip-placement="bottom" tooltip="See details" ng-click="" >master_list3</a>
+                                        <a title="See details" ng-click="" >master_list3</a>
                                       </td>
                                       <td>
                                         100 KB
@@ -146,19 +141,20 @@
                               </tbody>
                           </table>
                       </div>
+                      <div class="hr-line-dashed"></div>
                       <div class="form-group row-flex">
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-primary btn-block" type="submit" tabindex="">SAVE</button>
+                            <button class="btn btn-primary btn-block" type="submit" tabindex="2">SAVE</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" tabindex="">CANCEL </button>
+                            <button class="btn btn-white btn-block" type="submit" tabindex="4">CANCEL </button>
                           </div>
                       </div>
                     </form>
                   </div>
               </tab>
               <tab>
-                  <tab-heading>
+                  <tab-heading tabindex="5">
                      <i class="fa fa-file-o"></i> INDIVIDUAL ACTIONS
                   </tab-heading>
                   <div class="panel-body">
@@ -167,7 +163,7 @@
                           <div class="col-md-6 col-lg-6">
                               <div class="form-group">
                                   <label>Select a list</label> 
-                                  <select  chosen class="chosen-select form-control" tabindex="">
+                                  <select  chosen class="chosen-select form-control" name="" tabindex="6">
                                     <option selected value="">select...</option>
                                     <option value="">example_list_1</option>
                                     <option value="">example_list_2</option>
@@ -178,7 +174,7 @@
                           <div class="col-md-6 col-lg-6">
                               <div class="form-group">
                                   <label>Select an action</label> 
-                                  <select  class="form-control" tabindex="">
+                                  <select  class="form-control" tabindex="" name="" tabindex="7">
                                     <option value="">Select...</option>
                                     <option value="">Separate lists</option>
                                     <option value="">Make sample</option>
@@ -187,13 +183,13 @@
                               </div>
                           </div>
                       </div>
-                      
+                      <div class="hr-line-dashed"></div>
                       <div class="form-group row-flex">
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-primary btn-block" type="submit" tabindex="">APPLY</button>
+                            <button class="btn btn-primary btn-block" type="submit" tabindex="8">APPLY</button>
                           </div>
                           <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                            <button class="btn btn-white btn-block" type="submit" tabindex="">CANCEL </button>
+                            <button class="btn btn-white btn-block" type="submit" tabindex="9">CANCEL </button>
                           </div>
                       </div>
                     </form>

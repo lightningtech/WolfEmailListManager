@@ -12,9 +12,9 @@ function pageTitle($rootScope, $timeout) {
         link: function(scope, element) {
             var listener = function(event, toState, toParams, fromState, fromParams) {
                 // Default title - load on Dashboard 1
-                var title = 'INSPINIA | Responsive Admin Theme';
+                var title = 'MLM | Madly email list manager';
                 // Create your own title pattern
-                if (toState.data && toState.data.pageTitle) title = 'INSPINIA | ' + toState.data.pageTitle;
+                if (toState.data && toState.data.pageTitle) title = 'MLM | ' + toState.data.pageTitle;
                 $timeout(function() {
                     element.text(title);
                 });
@@ -104,6 +104,21 @@ function minimalizaSidebar($timeout) {
     };
 };
 
+/**
+ * ionRangeSlider - Directive for Ion Range Slider
+ */
+function ionRangeSlider() {
+    return {
+        restrict: 'A',
+        scope: {
+            rangeOptions: '='
+        },
+        link: function (scope, elem, attrs) {
+            elem.ionRangeSlider(scope.rangeOptions);
+        }
+    }
+}
+
 
 
 /**
@@ -116,3 +131,4 @@ angular
     .directive('sideNavigation', sideNavigation)
     .directive('iboxTools', iboxTools)
     .directive('minimalizaSidebar', minimalizaSidebar)
+    .directive('ionRangeSlider',ionRangeSlider)

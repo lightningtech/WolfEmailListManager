@@ -223,7 +223,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
                             files: ['css/plugins/chosen/chosen.css','js/plugins/chosen/chosen.jquery.js','js/plugins/chosen/chosen.js']
                         },
                         {
-                            files: ['css/plugins/multiselect/multi-select.css','js/plugins/multiselect/jquery.multi-select.js','js/plugins/multiselect/jquery.quicksearch.js']
+                            files: ['js/plugins/jquery-tags-input/jquery.tagsinput.min.js','js/plugins/jquery-tags-input/jquery.tagsinput.css']
                         }
                     ]);
                 }

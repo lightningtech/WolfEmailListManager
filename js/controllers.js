@@ -23,6 +23,10 @@ function CleanCtrl($scope,WizardHandler,FileUploader) {
     uploader.onAfterAddingAll = function(addedFileItems) {
         $scope.fileprocess = true
     };
+    uploader.onCompleteItem = function(fileItem, response, status, headers) {
+            console.info('onCompleteItem', fileItem, response, status, headers);
+        };
+
 };
 
 function listmanagementCtrl ($scope,$state) {

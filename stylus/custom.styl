@@ -140,6 +140,32 @@ body.mini-navbar .logo-big
 		font-size 1.4em
 input[type="checkbox"], input[type="radio"] 
 	cursor pointer
+/****************** 
+	PLUGIN STYLE
+*******************/
+/***
+Modify jquery-tags-input plugin css
+***/
+.form-group div.tagsinput 
+	height: auto !important
+	margin: 0
+	padding: 2px
+	overflow: auto
+	span.tag 
+		background: #eee
+		border: 1px solid #ededed
+		color: #333
+		a 
+			color: #333
+	input 
+		width: auto !important
+	.not_valid 
+		color: #fff
+		background-color: #e02222
+	span.tag,.not_valid,input 
+		margin: 3px 0 2px 5px
+		padding: 1px 10px 1px 5px
+
 // plugin checkbox and radio
 .table .checkbox
 	input[type="checkbox"], input[type="radio"] 
@@ -218,10 +244,10 @@ table
 ***************/
 // fileupload style
 .my-drop-zone 
-	border: dotted 3px lightgray; 
+	border: dotted 3px lightgray 
 	padding: 50px
 .another-file-over-class 
-	border: dotted 3px green;
+	border: dotted 3px green
 // multi select
 .ms-container
 	width 100% !important

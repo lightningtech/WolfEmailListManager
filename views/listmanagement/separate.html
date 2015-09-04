@@ -22,7 +22,7 @@
           <div ibox-tools></div>
       </div>
       <div class="ibox-content">
-        <form role="form" name="" action="">
+        <form role="form" name="name" id="name" method="post" action="">
           <div class="form-title-section">
             <h3>SELECTED LIST <span>INFO</span></h3>
           </div>
@@ -54,44 +54,24 @@
           <div class="form-title-section">
             <h3>separate <span>options</span></h3>
           </div>
-
-          <div class="row-flex middle-flex-md">
-            <div class="col-flex-md-2 col-flex-xs-12">
-                <div class="form-group">
-                    <label>separate by countries</label> 
-                    <div class="switch">
-                        <div class="onoffswitch" tabindex="1">
-                            <input type="checkbox" checked class="onoffswitch-checkbox" id="sortusername" name="">
-                            <label class="onoffswitch-label" for="sortusername">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-flex-md-10 col-flex-xs-12">
+          <div class="row">
+            <div class="col-md-6">
               <div class="form-group">
-                <label>select countries</label> 
-                <select id='selectcountry' multiple='multiple' name="" tabindex="2">
-                  <option value='elem_1'>Venezuela</option>
-                  <option value='elem_2'>Colombia</option>
-                  <option value='elem_3'>Ecuador</option>
-                  <option value='elem_4'>Mexico</option>
+                <label>Select separate countries</label> 
+                <select multiple chosen class="chosen-select form-control" data-placeholder="Select country" tabindex="1" id="" name="" required ng-model="">
+                  <optgroup label="AVAILABLE COUNTRIES">
+                    <option value='elem_1'>Ecuador</option>
+                    <option value='elem_2'>Colombia</option>
+                    <option value='elem_3'>Mexico</option>
+                    <option value='elem_4'>Venezuela</option>
+                  </optgroup>
                 </select>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 col-lg-12">
-                <div class="form-group">
-                  <label for="">Separate these domains</label>
-                  <select multiple chosen class="chosen-select form-control" name="" tabindex="3">
-                    <option selected value="">example.com.ve</option>
-                    <option selected value="">example.com.co</option>
-                    <option selected value="">google.com</option>
-                    <option selected value="">ask.fm</option>
-                  </select>
+            <div class="col-md-6 col-lg-6">
+                <div class="form-group" tabindex="2">
+                  <label>Type separate domains <i class="fa fa-question-circle text-warning" tooltip-placement="top" tooltip="Type domain then press enter"></i></label>
+                  <input type="text" class="form-control tags" value="" id="domains" name="domains" required ng-model="domains" />
                 </div>
             </div>
           </div>
@@ -102,7 +82,7 @@
               <div class="col-md-6 col-lg-6">
                   <div class="form-group">
                       <label>Name of the result list</label> 
-                      <input type="text" placeholder="Enter name" class="form-control" name="" tabindex="4">
+                      <input type="text" class="form-control" tabindex="3" placeholder="Enter name" id="" name="" required ng-model="">
                   </div>
               </div>
           </div>
@@ -115,7 +95,7 @@
                       <label>Sort by username</label> 
                       <div class="switch">
                           <div class="onoffswitch" tabindex="5">
-                              <input type="checkbox" checked class="onoffswitch-checkbox" id="sortusername" name="">
+                              <input type="checkbox" checked class="onoffswitch-checkbox" name="sortusername" tabindex="4" id="sortusername" name="sortusername" required ng-model="sortusername">
                               <label class="onoffswitch-label" for="sortusername">
                                   <span class="onoffswitch-inner"></span>
                                   <span class="onoffswitch-switch"></span>
@@ -129,7 +109,7 @@
                       <label>Sort by domain</label> 
                       <div class="switch">
                           <div class="onoffswitch" tabindex="6">
-                              <input type="checkbox" checked class="onoffswitch-checkbox" id="sortdomain" name="">
+                              <input type="checkbox" checked class="onoffswitch-checkbox" tabindex="5" id="sortdomain" name="sortdomain" required ng-model="sortdomain">
                               <label class="onoffswitch-label" for="sortdomain">
                                   <span class="onoffswitch-inner"></span>
                                   <span class="onoffswitch-switch"></span>
@@ -142,10 +122,10 @@
           <div class="hr-line-dashed"></div>
           <div class="form-group row-flex">
               <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                <button class="btn btn-primary btn-block" type="submit" tabindex="7">APPLY</button>
+                <button class="btn btn-primary btn-block" type="submit" tabindex="6">APPLY</button>
               </div>
               <div class="col-flex-md-3 col-flex-lg-2 col-flex-xs">
-                <a class="btn btn-white btn-block" ui-sref="listmanagement.list" tabindex="8">CANCEL </a>
+                <a class="btn btn-white btn-block" ui-sref="listmanagement.list" tabindex="7">CANCEL </a>
               </div>
           </div>
         </form>
@@ -154,40 +134,9 @@
 </div>
 <script>
 $(document).ready(function () {
-  $('#selectcountry').multiSelect({
-    selectableHeader: "<div class='custom-header'>Available countries</div><input type='text' class='search-input form-control' autocomplete='off' placeholder='search...'>",
-    selectionHeader: "<div class='custom-header'>Separate these countries</div><input type='text' class='search-input form-control' autocomplete='off' placeholder='search...'>",
-    afterInit: function(ms){
-      var that = this,
-          $selectableSearch = that.$selectableUl.prev(),
-          $selectionSearch = that.$selectionUl.prev(),
-          selectableSearchString = '#'+that.$container.attr('id')+' .ms-elem-selectable:not(.ms-selected)',
-          selectionSearchString = '#'+that.$container.attr('id')+' .ms-elem-selection.ms-selected';
-
-      that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
-      .on('keydown', function(e){
-        if (e.which === 40){
-          that.$selectableUl.focus();
-          return false;
-        }
-      });
-
-      that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
-      .on('keydown', function(e){
-        if (e.which == 40){
-          that.$selectionUl.focus();
-          return false;
-        }
-      });
-    },
-    afterSelect: function(){
-      this.qs1.cache();
-      this.qs2.cache();
-    },
-    afterDeselect: function(){
-      this.qs1.cache();
-      this.qs2.cache();
-    }
+  $('#domains').tagsInput({
+    'width': 'auto',
+    'defaultText':'type domain',
   });
 });
 </script>
